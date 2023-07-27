@@ -1,0 +1,5 @@
+entity: ArticleContent
+items:
+  articleContent{1..10}:
+    content: '($current) Lorem ipsum ($current)'
+    

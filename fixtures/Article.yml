@@ -1,0 +1,11 @@
+entity: Article
+items:
+  article{1..10}:
+    title: 'Article ($current)'
+    perex: 'Lorem ipsum ($current)'
+    author: '@user1'
+    image: '@image($current)'
+    createdAt: '2023-07-27T08:00:05.000Z'
+    lastUpdatedAt: '2023-07-27T15:14:46.000Z'
+    articleContent: '@articleContent($current)'
+    

@@ -1,0 +1,14 @@
+entity: Comment
+items:
+  comment{1..6}:
+    author: '@user1'
+    article: '@article($current)'
+    content: 'comment ($current): what do you guys think?'
+    postedAt: '2023-07-26T11:5($current):12.000Z'
+    score: 1
+  comment{7..9}:
+    author: '@user2'
+    article: '@article($current-6)'
+    content: 'comment ($current): good job!'
+    postedAt: '2023-07-26T13:5($current):37.000Z'
+    score: 0

@@ -1,0 +1,5 @@
+entity: Image
+items:
+  image{1..10}:
+    name: 'image($current).png'
+    
