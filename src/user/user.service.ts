@@ -14,7 +14,7 @@ import { GetQuery } from 'src/common/common.dto';
 export class UserService {
   constructor(
     @InjectRepository(User) private userRepository: Repository<User>,
-  ) { }
+  ) {}
 
   async create(user: CreateUserDto): Promise<UserDto> {
     if (await this.usernameExists(user.username)) {

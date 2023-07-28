@@ -30,7 +30,7 @@ export class ArticleService {
     @InjectRepository(Image)
     private readonly imageRepository: Repository<Image>,
     @InjectRepository(User) private readonly userRepository: Repository<User>,
-  ) { }
+  ) {}
 
   async create(article: CreateArticleDto): Promise<ArticleDetailDto> {
     if (await this.articleWithTitleExists(article.title)) {
@@ -102,9 +102,7 @@ export class ArticleService {
 
   //------------------------------------------------------------
 
-  private async findByIdWithDetail(
-    id: string,
-  ): Promise<Article | null> {
+  private async findByIdWithDetail(id: string): Promise<Article | null> {
     return this.articleRepository.findOne({
       where: { id },
       //relations: {
@@ -113,7 +111,14 @@ export class ArticleService {
       //  articleContent: true,
       //  comments: true,
       //},
-      relations: ['image', 'author', 'articleContent', 'comments', 'comments.author', 'comments.article'],
+      relations: [
+        'image',
+        'author',
+        'articleContent',
+        'comments',
+        'comments.author',
+        'comments.article',
+      ],
     });
   }
 

@@ -1,4 +1,12 @@
-import { IsDateString, Min, IsNotEmpty, IsNumber, IsOptional, IsString, IsUUID } from "class-validator";
+import {
+  IsDateString,
+  Min,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+  IsUUID,
+} from 'class-validator';
 
 export class CreateCommentDto {
   @IsUUID()

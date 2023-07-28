@@ -1,6 +1,10 @@
 import { toCommentDto } from '../../comment/mappers/comment.mapper';
 import { Article } from '../article.entity';
-import { ArticleDetailDto, ArticleDto, UpdateArticleDto } from '../dto/article.dto';
+import {
+  ArticleDetailDto,
+  ArticleDto,
+  UpdateArticleDto,
+} from '../dto/article.dto';
 
 export const mapUpdatedArticleFields = (
   existing: Article,
