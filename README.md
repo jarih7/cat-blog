@@ -22,6 +22,13 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## k implementaci - co není a mohlo být #time
+
+- graphql rozhraní bych přidal a zdokumentoval dle nestovské dokumentace (@nestjs/graphql)
+- přidal bych e2e testy (jest)
+- přihlašování a následná autentizace requestů: po přihlášení by se v response zaslal frontendu jwt token (použil bych nestovský JwtModule), který by frontend přikládal ke všem dalším requestům. K endpointům v kontrolerech bych přidal dekorátor, který by každý request validoval, zda obsahuje html header s validním bearer tokenem
+- pro komplikovanější práci s daty bych přidal entity repozitáře a pracoval s query buildery
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
