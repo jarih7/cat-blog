@@ -1,0 +1,6 @@
+entity: Vote
+items: 
+  vote1:
+    ip: 'first-ip'
+    vote: 1
+    

@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ArticleModule } from './article/article.module';
 import { ImageModule } from './image/image.module';
 import { CommentModule } from './comment/comment.module';
+import { VoteModule } from './vote/vote.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { CommentModule } from './comment/comment.module';
     ArticleModule,
     ImageModule,
     CommentModule,
+    VoteModule,
   ],
   controllers: [AppController],
   providers: [AppService],

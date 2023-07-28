@@ -5,6 +5,7 @@ import { Comment } from './comment.entity';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Article } from '../article/article.entity';
 import { User } from '../user/user.entity';
+import { Vote } from '../vote/vote.entity';
 
 describe('CommentController', () => {
   let controller: CommentController;
@@ -20,6 +21,10 @@ describe('CommentController', () => {
         },
         {
           provide: getRepositoryToken(Comment),
+          useValue: {},
+        },
+        {
+          provide: getRepositoryToken(Vote),
           useValue: {},
         },
         {

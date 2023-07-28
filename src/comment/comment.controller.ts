@@ -1,4 +1,4 @@
-import { Body, Controller, Param, Post } from '@nestjs/common';
+import { Body, Controller, Ip, Param, Post } from '@nestjs/common';
 import { CommentDto, CreateCommentDto } from './dto/comment.dto';
 import { CommentService } from './comment.service';
 import { ApiParam } from '@nestjs/swagger';
@@ -14,13 +14,19 @@ export class CommentController {
 
   @Post(':commentId/vote/up')
   @ApiParam({ name: 'commentId', type: String })
-  async voteUp(@Param('commentId') commentId: string): Promise<CommentDto> {
-    return this.commentService.voteUp(commentId);
+  async voteUp(
+    @Param('commentId') commentId: string,
+    @Ip() ip,
+  ): Promise<CommentDto> {
+    return this.commentService.voteUp(commentId, ip);
   }
 
   @Post(':commentId/vote/down')
   @ApiParam({ name: 'commentId', type: String })
-  async voteDown(@Param('commentId') commentId: string): Promise<CommentDto> {
-    return this.commentService.voteDown(commentId);
+  async voteDown(
+    @Param('commentId') commentId: string,
+    @Ip() ip,
+  ): Promise<CommentDto> {
+    return this.commentService.voteDown(commentId, ip);
   }
 }
