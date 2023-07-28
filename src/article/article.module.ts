@@ -4,8 +4,8 @@ import { ArticleController } from './article.controller';
 import { Article } from './article.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ArticleContent } from './articleContent.entity';
-import { Image } from 'src/image/image.entity';
-import { User } from 'src/user/user.entity';
+import { Image } from '../image/image.entity';
+import { User } from '../user/user.entity';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Article, ArticleContent, Image, User])],
