@@ -5,20 +5,20 @@ import { GetQuery } from '../common/common.dto';
 
 @Controller('users')
 export class UserController {
-    constructor(private readonly userService: UserService) { }
+  constructor(private readonly userService: UserService) {}
 
-    @Post()
-    async create(@Body() user: CreateUserDto): Promise<UserDto> {
-        return this.userService.create(user);
-    }
+  @Post()
+  async create(@Body() user: CreateUserDto): Promise<UserDto> {
+    return this.userService.create(user);
+  }
 
-    @Get()
-    async getMany(@Query() query: GetQuery): Promise<UserDto[]> {
-        return this.userService.getAll(query);
-    }
+  @Get()
+  async getMany(@Query() query: GetQuery): Promise<UserDto[]> {
+    return this.userService.getAll(query);
+  }
 
-    @Get(':id')
-    async getOne(@Param('id') id: string): Promise<UserDto> {
-        return this.userService.getOne(id);
-    }
+  @Get(':id')
+  async getOne(@Param('id') id: string): Promise<UserDto> {
+    return this.userService.getOne(id);
+  }
 }

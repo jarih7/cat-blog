@@ -1,14 +1,37 @@
+import { IsDateString, Min, IsNotEmpty, IsNumber, IsOptional, IsString, IsUUID } from "class-validator";
+
 export class CreateCommentDto {
-    articleId: string;
-    authorId: string;
-    content: string;
+  @IsUUID()
+  articleId: string;
+
+  @IsUUID()
+  authorId: string;
+
+  @IsString()
+  @IsNotEmpty()
+  content: string;
 }
 
 export class CommentDto {
-    commentId: string;
-    articleId: string;
-    author: string;
-    content: string;
-    postedAt: string;
-    score: number;
+  @IsUUID()
+  commentId: string;
+
+  @IsUUID()
+  @IsOptional()
+  articleId: string;
+
+  @IsString()
+  @IsNotEmpty()
+  author: string;
+
+  @IsString()
+  @IsNotEmpty()
+  content: string;
+
+  @IsDateString()
+  postedAt: string;
+
+  @IsNumber()
+  @Min(0)
+  score: number;
 }

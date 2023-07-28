@@ -1,4 +1,4 @@
 export class ImageDto {
-    imageId: string;
-    name: string;
+  imageId: string;
+  name: string;
 }

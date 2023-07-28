@@ -9,6 +9,6 @@ import { Article } from 'src/article/article.entity';
 @Module({
   imports: [TypeOrmModule.forFeature([Comment, User, Article])],
   providers: [CommentService],
-  controllers: [CommentController]
+  controllers: [CommentController],
 })
-export class CommentModule { }
+export class CommentModule {}

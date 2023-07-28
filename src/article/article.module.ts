@@ -5,10 +5,11 @@ import { Article } from './article.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ArticleContent } from './articleContent.entity';
 import { Image } from 'src/image/image.entity';
+import { User } from 'src/user/user.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Article, ArticleContent, Image])],
+  imports: [TypeOrmModule.forFeature([Article, ArticleContent, Image, User])],
   providers: [ArticleService],
-  controllers: [ArticleController]
+  controllers: [ArticleController],
 })
-export class ArticleModule { }
+export class ArticleModule {}

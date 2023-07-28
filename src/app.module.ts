@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserController } from './user/user.controller';
 import { ArticleModule } from './article/article.module';
 import { ImageModule } from './image/image.module';
 import { CommentModule } from './comment/comment.module';
@@ -30,4 +29,4 @@ import { CommentModule } from './comment/comment.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}
